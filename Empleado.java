@@ -3,13 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mx.unam.aragon.Fes;
+package mx.unam.aragon.fes;
+
+import java.io.Serializable;
 
 /**
  *
- * @author Alan
+ * @author unam
  */
-public class Empleado extends Persona {
+public class Empleado extends Persona implements Serializable {
 
     private int numeroEmpleado;
     private String departamento;
@@ -28,8 +30,8 @@ public class Empleado extends Persona {
         this.domicilio = domicilio;
     }
 
-    public Empleado(int numeroEmpleado, String departamento, float sueldo, int horasExtra, Direccion domicilio, String nombre, String apPaerno, String apMaterno, int edad, String curp) {
-        super(nombre, apPaerno, apMaterno, edad, curp);
+    public Empleado(int numeroEmpleado, String departamento, float sueldo, int horasExtra, Direccion domicilio, String nombre, String apPaterno, String apMaterno, int edad, String curp) {
+        super(nombre, apPaterno, apMaterno, edad, curp);
         this.numeroEmpleado = numeroEmpleado;
         this.departamento = departamento;
         this.sueldo = sueldo;
@@ -83,9 +85,9 @@ public class Empleado extends Persona {
     }
 
     public float calcularSueldo() {
-        //horas extra a $150
+        // Hoas exta a $150.0
         float sueldoTotal = 0.0f;
-        sueldoTotal = this.sueldo + (this.horasExtra * 150.f);
+        sueldoTotal = this.sueldo + (this.horasExtra * 150.0f);
 
         return sueldoTotal;
     }

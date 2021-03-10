@@ -3,15 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mx.unam.aragon.Fes;
+package mx.unam.aragon.fes;
+
+import java.io.Serializable;
 
 /**
  *
- * @author Alan
+ * @author unam
  */
-public class Persona {
+public class Persona implements Serializable{
     private String nombre;
-    private String apPaerno;
+    private String apPaterno;
     private String apMaterno;
     private int edad;
     private String curp;
@@ -19,9 +21,9 @@ public class Persona {
     public Persona() {
     }
 
-    public Persona(String nombre, String apPaerno, String apMaterno, int edad, String curp) {
+    public Persona(String nombre, String apPaterno, String apMaterno, int edad, String curp) {
         this.nombre = nombre;
-        this.apPaerno = apPaerno;
+        this.apPaterno = apPaterno;
         this.apMaterno = apMaterno;
         this.edad = edad;
         this.curp = curp;
@@ -43,12 +45,12 @@ public class Persona {
         this.nombre = nombre;
     }
 
-    public String getApPaerno() {
-        return apPaerno;
+    public String getApPaterno() {
+        return apPaterno;
     }
 
-    public void setApPaerno(String apPaerno) {
-        this.apPaerno = apPaerno;
+    public void setApPaterno(String apPaterno) {
+        this.apPaterno = apPaterno;
     }
 
     public String getApMaterno() {
@@ -69,8 +71,13 @@ public class Persona {
 
     @Override
     public String toString() {
-        return "Persona{" + "nombre=" + nombre + "\n apPaerno=" + apPaerno + "\n apMaterno=" + apMaterno + "\n edad=" + edad + "\n curp=" + curp + '}';
+        return "Persona{" + "nombre=" + nombre + "\n apPaterno=" + apPaterno + "\n apMaterno=" + apMaterno + "\n edad=" + edad + "\n curp=" + curp + '}';
     }
+
+    
+    
+    
+    
     
     
 }
